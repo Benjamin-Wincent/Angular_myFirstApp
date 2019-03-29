@@ -1,0 +1,11 @@
+<img [src]="user.photo" [alt]="photo" />
+
+<div><span>name: </span>{{user.name}}</div>
+<div><span>firstName: </span>{{user.firstName}}</div>
+
+<div>{{user.quote}}</div>
+<input type="text" [(ngModel)]="user.quote">
+
+<div [hidden]= "user.hide"> Age: {{user.age}}</div>
+<br>
+<button (click)='user.hide = !user.hide'>AFFICHER/CACHER</button>
