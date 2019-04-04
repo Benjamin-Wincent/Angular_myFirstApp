@@ -7,7 +7,8 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { FormsModule } from '@angular/forms';
 import { FilmsComponent } from './films/films.component';
-import { HighlightDirective } from './highlight.directive'; // <-- NgModel lives here
+import { HighlightDirective } from './highlight.directive';
+import { DisplayMoviesDirective } from './display-movies.directive'; // <-- NgModel lives here
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { HighlightDirective } from './highlight.directive'; // <-- NgModel lives
     SignUpComponent,
     UserProfileComponent,
     FilmsComponent,
-    HighlightDirective
+    HighlightDirective,
+    DisplayMoviesDirective
   ],
   imports: [
     BrowserModule,

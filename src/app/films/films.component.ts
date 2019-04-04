@@ -12,4 +12,6 @@ export class FilmsComponent implements OnInit {
   ngOnInit() {
   }
 
+  showMoviesList:boolean = true;
+
 }
