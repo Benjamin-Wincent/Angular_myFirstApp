@@ -8,7 +8,25 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
 import { FormsModule } from '@angular/forms';
 import { FilmsComponent } from './films/films.component';
 import { HighlightDirective } from './highlight.directive';
-import { DisplayMoviesDirective } from './display-movies.directive'; // <-- NgModel lives here
+import { DisplayMoviesDirective } from './display-movies.directive';
+import { MenuComponent } from './menu/menu.component'; // <-- NgModel lives here
+import { Routes, RouterModule } from '@angular/router';
+
+const appRoutes: Routes = [
+  {
+    path: 'sign-up',
+    component: SignUpComponent
+  },
+  {
+    path: 'user-profile',
+    component: UserProfileComponent
+  },
+  {
+    path: '',
+    redirectTo: '/user-profile',
+    pathMatch: 'full'
+  }
+];
 
 @NgModule({
   declarations: [
@@ -17,11 +35,13 @@ import { DisplayMoviesDirective } from './display-movies.directive'; // <-- NgMo
     UserProfileComponent,
     FilmsComponent,
     HighlightDirective,
-    DisplayMoviesDirective
+    DisplayMoviesDirective,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    RouterModule.forRoot(appRoutes),
     FormsModule
   ],
   providers: [],
